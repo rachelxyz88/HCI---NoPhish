@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Kuis | Congratulations!</title>
+    <link rel="stylesheet" href="result.css"> </head>
+<body>
+    <nav class="navbar">
+        <div class="logo">No<span>Phish</span></div>
+        <ul class="nav-links">
+            <li><a href="../index.html">HomePage</a></li>
+            <li><a href="../artikel.html">Artikel</a></li>
+            <li><a href="../quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <!-- <span class="emoji">🎉</span> -->
+            
+            <h1 class="score-text"></h1>
+            <button class="take-quiz-btn" onclick="window.location.href='../quiz.html'">Take the quiz again</button>
+        </header>
+
+        <section class="results-list">
+            <div class="result-item correct">
+                <span class="q-num">1/5</span>
+                <span class="q-desc">Fake netflix email</span>
+                <span class="status">Correct</span>
+                <button class="review-btn" onclick="window.location.href='q1-result.html'">Review</button>
+            </div>
+
+            <div class="result-item incorrect">
+                <span class="q-num">2/5</span>
+                <span class="q-desc">Real hoyoverse email</span>
+                <span class="status">Incorrect</span>
+                <button class="review-btn">Review</button>
+            </div>
+
+            <div class="result-item incorrect">
+                <span class="q-num">3/5</span>
+                <span class="q-desc">Fake facebook Notice</span>
+                <span class="status">Incorrect</span>
+                <button class="review-btn">Review</button>
+            </div>
+
+            <div class="result-item incorrect">
+                <span class="q-num">4/5</span>
+                <span class="q-desc">Fake dropbox Notice</span>
+                <span class="status">Incorrect</span>
+                <button class="review-btn">Review</button>
+            </div>
+            
+            <div class="result-item incorrect">
+                <span class="q-num">5/5</span>
+                <span class="q-desc">Fake paypal Notice</span>
+                <span class="status">Incorrect</span>
+                <button class="review-btn">Review</button>
+            </div>
+            </section>
+    </div>
+    <script src="result.js"></script>
+</body>
+</html>

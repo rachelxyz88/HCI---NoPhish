@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Phishing - No Phish</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="report-styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">No<span>Phish</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">HomePage</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+        <button class="register-btn" onclick="window.location.href='register.html'">Register</button>
+    </nav>
+
+    <!-- REPORT PAGE CONTENT -->
+    <section class="report-page">
+        <div class="report-container">
+            
+            <!-- FORM CARD SECTION -->
+            <div class="report-card">
+                <div class="card-header">
+                    <h1>Phishing Incident Details</h1>
+                </div>
+
+                <form id="reportForm" onsubmit="submitReport(event)">
+                    
+                    <!-- Email Name -->
+                    <div class="form-group">
+                        <label for="emailSuspicious">Email Name</label>
+                        <input type="email" id="emailSuspicious" name="emailSuspicious" placeholder="Insert your email name" required>
+                    </div>
+
+                    <!-- Name Optional -->
+                    <div class="form-group">
+                        <label for="nameOptional">Name (Optional)</label>
+                        <input type="text" id="nameOptional" name="nameOptional" placeholder="Insert your name">
+                    </div>
+
+                    <!-- File Attachment -->
+                    <div class="form-group">
+                        <label for="fileAttachment">File Attachment</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="fileAttachment" name="fileAttachment" accept=".jpg,.jpeg,.png" required>
+                            <label for="fileAttachment" class="file-upload-label">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="17 8 12 3 7 8"></polyline>
+                                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                                <span>Click to upload</span>
+                            </label>
+                            <p class="file-info" id="fileInfo">Allowed formats: JPG, PNG (Max 5MB)</p>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="form-group">
+                        <label for="description">Describe</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Explain what happened" required></textarea>
+                    </div>
+
+                    <!-- Form Button -->
+                    <button type="submit" class="btn-submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- INFO SECTION -->
+            <div class="report-info">
+                <div class="info-header">
+                    <h2>Customer Support NoPhis</h2>
+                </div>
+                <div class="info-content">
+                    <p class="info-label">Hotline:</p>
+                    <p class="info-text">(021) 888-123</p>
+                    
+                    <p class="info-label mt-3">WA Only:</p>
+                    <p class="info-text">0812-2333-1010</p>
+                    
+                    <p class="info-label mt-3">Email:</p>
+                    <p class="info-text">NoPhisCareSolution@nophish.com</p>
+                    
+                    <p class="info-label mt-3">Operational Hours:</p>
+                    <p class="info-text">Monday - Friday, 09:00 - 16:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS PAGE -->
+    <div id="successPage" class="success-page-overlay">
+        <div class="success-page-container">
+            <div class="success-content">
+                <div class="success-icon">❤️</div>
+                <h2>THANK YOU</h2>
+                <p>For submitting the report</p>
+                <button class="btn-back-report" onclick="backToHome()">Back to Report</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

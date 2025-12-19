@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - NoPhish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">No<span>Phish</span></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </header>
+
+    
+    <section class="hero-article">
+        <div class="hero-article-text">
+            <h1>Social Engineering:<br>Phishing that Exploits Emotions (Panic, Fear, Temptation of Prizes)</h1>
+        </div>
+
+        <img src="social.jpg" alt="Phishing Illustration">
+    </section>
+
+    
+    <section class="article-container">
+
+        <h2>Educational Goals</h2>
+        <p>
+            Users understand that phishing emails are not just bad emails or typos, but many look very similar to
+            official emails, complete with logos, similar domains, and even neat language.
+        </p>
+
+        <h2>What is a Phishing Email?</h2>
+        <p>
+            Users understand that phishing emails are not just bad emails or typos, but many look very similar to
+            official emails, complete with logos, domains, and messages that seem urgent.
+        </p>
+
+        <ul>
+            <li>Uses logos and designs similar to official emails</li>
+            <li>Uses similar email domains (e.g., <b>@tokoped1a-support.com</b>)</li>
+            <li>Contains urgent messages like “Your account will be blocked in 24 hours!”</li>
+            <li>Fake CTA buttons/links like “Verify Now”</li>
+        </ul>
+
+        <h2>Real Case Scenario</h2>
+        
+        <a href="https://abnormal.ai/threat-intelligence/digest/phishing-attack-impersonates-apple-with-fake-apple-id-locked-notification-to-steal-sensitive-information?utm_source=chatgpt.com" 
+            target="_blank" 
+            class="read-more-external">
+            Read More →
+        </a>
+
+        <p><b>"Fake Emails Using BRI Bank Name Harm Many Customers"</b></p>
+
+        <p>
+            Victims clicked links in fake emails that appeared to be from banks, redirected to fake websites,
+            then drained their funds within minutes.
+        </p>
+
+        <h2>Why Do So Many People Get Fooled?</h2>
+        <ul>
+            <li>The email looks professional</li>
+            <li>The victim panics</li>
+            <li>“If this is fake, why does it look real?”</li>
+            <li>People rarely check email address details</li>
+        </ul>
+
+        <div class="quote-box">
+            The mindset that Nophish users should cultivate:  
+            <b>Always check the sender’s email address and the destination link before clicking anything.</b>
+        </div>
+
+    </section>
+
+</body>
+<section class="quiz-area">
+    <div class="quiz-layout">
+
+        
+        <div class="quiz-left">
+            <h2>Which of the following best describes the characteristics of a phishing email?</h2>
+
+            <div class="options-grid">
+                <div class="option" onclick="checkAnswer(this, false)">A. It is always full of spelling mistakes and never uses professional design.</div>
+                <div class="option" onclick="checkAnswer(this, true)">B. It often uses official-looking logos, similar domains, and urgent messages to make the victim panic.</div>
+                <div class="option" onclick="checkAnswer(this, false)">C. It only contains shopping promotions and never asks the user to take action.</div>
+                <div class="option" onclick="checkAnswer(this, false)">D. It is always sent from an official domain such as @bankbri.co.id.</div>
+            </div>
+        </div>
+
+        
+        <div class="quiz-image">
+            <img src="hiasan.png" alt="Quiz Decoration">
+        </div>
+
+        
+        <img class="quiz-illustration" src="ai.png" alt="illustration">
+
+    </div>
+</section>
+
+
+<script>
+function checkAnswer(element, isCorrect) {
+
+    const all = document.querySelectorAll(".option");
+
+    // Reset warna
+    all.forEach(opt => opt.classList.remove("correct", "wrong", "disabled"));
+
+    if (isCorrect) {
+        element.classList.add("correct");
+    } else {
+        element.classList.add("wrong");
+    }
+
+    all.forEach(opt => opt.classList.add("disabled"));
+}
+</script>
+
+
+</html>

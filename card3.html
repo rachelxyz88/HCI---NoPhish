@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - NoPhish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">No<span>Phish</span></div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="artikel.html">Artikel</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </header>
+
+    
+    <section class="hero-article">
+        <div class="hero-article-text">
+            <h1>Be Careful!<br>Phishing Scam Using QR Code</h1>
+        </div>
+
+        <img src="qr.jpg" alt="Phishing Illustration">
+    </section>
+
+    
+    <section class="article-container">
+
+        <h2>Educational Goals</h2>
+        <p>
+            Users understand that phishing doesn't only happen through suspicious emails or strange links. 
+            Today, scammers also use QR codes that look clean, official, and trustworthy — often placed on posters, messages, or service notifications.
+        </p>
+
+        <h2>What is a QR Code Phishing Scam?</h2>
+        <p>
+            Users understand that QR Code Phishing (also called Quishing) is a scam technique where attackers create fake QR codes that direct victims to malicious websites or steal personal information.
+        </p>
+
+        <ul>
+            <li>Uses logos and designs similar to official emails</li>
+            <li>Uses similar email domains (e.g., <b>@tokoped1a-support.com</b>)</li>
+            <li>Contains urgent messages like “Your account will be blocked in 24 hours!”</li>
+            <li>Fake CTA buttons/links like “Verify Now”</li>
+        </ul>
+
+        <h2>Real Case Scenario</h2>
+        
+        <a href="https://abnormal.ai/threat-intelligence/digest/phishing-attack-impersonates-apple-with-fake-apple-id-locked-notification-to-steal-sensitive-information?utm_source=chatgpt.com" 
+            target="_blank" 
+            class="read-more-external">
+            Read More →
+        </a>
+
+        <p><b>"Fake Emails Using BRI Bank Name Harm Many Customers"</b></p>
+
+        <p>
+            Victims clicked links in fake emails that appeared to be from banks, redirected to fake websites,
+            then drained their funds within minutes.
+        </p>
+
+        <h2>Why Do So Many People Get Fooled?</h2>
+        <ul>
+            <li>The QR code looks professional and legitimate</li>
+            <li>Victims feel safe because QR codes are seen as convenient and harmless</li>
+            <li>“If this is fake, why does it look real?”</li>
+            <li>Urgent messages cause panic</li>
+            <li>People rarely check email address details</li>
+        </ul>
+
+        <div class="quote-box">
+            The mindset that Nophish users should cultivate:  
+            <b>Always check the sender’s email address and the destination link before clicking anything.</b>
+        </div>
+
+    </section>
+
+</body>
+<section class="quiz-area">
+    <div class="quiz-layout">
+
+        
+        <div class="quiz-left">
+            <h2>Which of the following best describes a QR Code phishing scam?</h2>
+
+            <div class="options-grid">
+                <div class="option" onclick="checkAnswer(this, false)">A. A QR code that always directs users to the official website of the service provider.</div>
+                <div class="option" onclick="checkAnswer(this, true)"> B. A fake QR code that looks official and redirects victims to malicious websites to steal personal information.</div>
+                <div class="option" onclick="checkAnswer(this, false)"> C. A QR code used only for restaurant menus and cannot be manipulated by scammers.</div>
+                <div class="option" onclick="checkAnswer(this, false)"> D. A QR code that only displays harmless images and never requests login or payment.</div>
+            </div>
+        </div>
+
+        
+        <div class="quiz-image">
+            <img src="hiasan.png" alt="Quiz Decoration">
+        </div>
+
+        
+        <img class="quiz-illustration" src="ai.png" alt="illustration">
+
+    </div>
+</section>
+
+
+<script>
+function checkAnswer(element, isCorrect) {
+
+    const all = document.querySelectorAll(".option");
+
+    // Reset warna
+    all.forEach(opt => opt.classList.remove("correct", "wrong", "disabled"));
+
+    if (isCorrect) {
+        element.classList.add("correct");
+    } else {
+        element.classList.add("wrong");
+    }
+
+    all.forEach(opt => opt.classList.add("disabled"));
+}
+</script>
+
+
+</html>
